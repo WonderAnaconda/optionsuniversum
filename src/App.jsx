@@ -9,6 +9,7 @@ import pathDependenceImg from './assets/path_dependence.png';
 import robustnessImg from './assets/robustness.png';
 import rorGraphImg from './assets/ror_graph.png';
 import thetaDecayImg from './assets/theta_decay.png';
+import pnlPathImg from './assets/pnl_path.png';
 
 const fadeIn = {
   initial: { opacity: 0, y: 30 },
@@ -51,6 +52,11 @@ function EmblaCarousel() {
           <div className="flex-[0_0_100%] min-w-0">
             <div className="glass-panel p-4 bg-zinc-900/80">
               <img src={stratPerfImg} alt="Strategy Performance" className="w-full rounded-lg shadow-2xl" />
+            </div>
+          </div>
+          <div className="flex-[0_0_100%] min-w-0">
+            <div className="glass-panel p-4 bg-zinc-900/80">
+              <img src={pnlPathImg} alt="Strategy PnL Path" className="w-full rounded-lg shadow-2xl" />
             </div>
           </div>
         </div>
