@@ -116,11 +116,13 @@ function Slide({ title, subtitle, children, theme = "theme-intro", layout = "spl
               transition={{ duration: 0.8 }}
               className="w-full flex flex-col items-center"
             >
-              <div className="max-w-[85%] w-full">
-                <div className="glass-panel p-4 bg-zinc-900/80 w-fit mx-auto">
-                  <img src={image} alt={title} className="w-full rounded-lg shadow-2xl" />
+              {image && (
+                <div className="max-w-[85%] w-full">
+                  <div className="glass-panel p-4 bg-zinc-900/80 w-fit mx-auto">
+                    <img src={image} alt={title} className="w-full rounded-lg shadow-2xl" />
+                  </div>
                 </div>
-              </div>
+              )}
               {imageCaption && (
                 <p className="text-center text-sm font-mono text-zinc-500 mt-4 uppercase tracking-widest">
                   {imageCaption}
