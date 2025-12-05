@@ -497,7 +497,7 @@ function App() {
                 <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                 <div>
                   <h4 className="text-white font-semibold mb-1">Kein Idiosyncratisches Risk</h4>
-                  <p className="text-zinc-400">Diversifiziert durch den Index. Keine CEO-Scandale oder Earnings-Überraschungen.</p>
+                  <p className="text-zinc-400">Diversifiziert durch den Index. Keine CEO-Skandale oder Earnings-Überraschungen.</p>
                 </div>
               </li>
             </ul>
