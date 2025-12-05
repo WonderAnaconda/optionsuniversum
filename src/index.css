@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --color-zinc-950: #050505;
+  --color-zinc-900: #101012;
+  --color-zinc-800: #1f1f22;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'Roboto Mono', monospace;
+}
+
+@layer base {
+  html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-zinc-950 text-zinc-200 font-sans antialiased selection:bg-indigo-500/30 selection:text-indigo-200 text-lg;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-white tracking-tight;
+  }
+}
+
+@layer components {
+  .slide-container {
+    @apply min-h-screen w-full flex flex-col justify-center px-6 py-12 relative overflow-hidden border-b border-white/5;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .theme-intro {
+    @apply bg-zinc-950;
+    background-image: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.15) 0%, transparent 50%);
+  }
+
+  .theme-emerald {
+    @apply bg-zinc-950;
+    background-image: radial-gradient(circle at 100% 0%, rgba(16, 185, 129, 0.1) 0%, transparent 40%);
+  }
+
+  .theme-blue {
+    @apply bg-zinc-950;
+    background-image: radial-gradient(circle at 0% 0%, rgba(59, 130, 246, 0.1) 0%, transparent 40%);
+  }
+
+  .theme-violet {
+    @apply bg-zinc-950;
+    background-image: radial-gradient(circle at 50% 100%, rgba(139, 92, 246, 0.1) 0%, transparent 40%);
+  }
+
+  .theme-amber {
+    @apply bg-zinc-950;
+    background-image: radial-gradient(circle at 100% 100%, rgba(245, 158, 11, 0.1) 0%, transparent 40%);
+  }
+
+  .theme-rose {
+    @apply bg-zinc-950;
+    background-image: radial-gradient(circle at 0% 100%, rgba(244, 63, 94, 0.1) 0%, transparent 40%);
+  }
+
+  .theme-cyan {
+    @apply bg-zinc-950;
+    background-image: radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.05) 0%, transparent 50%);
+  }
+
+  .glass-panel {
+    @apply bg-zinc-900/40 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl;
+  }
+
+  .glass-card {
+    @apply bg-zinc-900/60 backdrop-blur-md border border-white/5 rounded-xl p-8 transition-all duration-500 hover:border-white/20 hover:bg-zinc-800/60;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-100 to-indigo-300;
+  }
+}
